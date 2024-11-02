@@ -51,21 +51,21 @@ void movePlayer(int &playerX, int &playerY, char direction) {
     }
 }
 
-int main() {
+int main(){
     int playerX = 0, playerY = 0;
     grid[playerX][playerY] = 'P';
 
     char input;
     bool gameRunning = true;
 
-    while (gameRunning) {
+    while (gameRunning){
         displayGrid();
         cout << "Enter move (w/a/s/d) or 'q' to quit: ";
 
         input = _getch();
         cout << input << endl;
 
-        if (input == 'q') {
+        if (input == 'q'){
             gameRunning = false;
         } else {
             movePlayer(playerX, playerY, input);
@@ -75,6 +75,7 @@ int main() {
             displayGrid();
             cout << "Congratulations! You've reached the end!" << endl;
             gameRunning = false;
+            
         }
     }
 
